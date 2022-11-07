@@ -1,3 +1,5 @@
+//Multithreaded program to calculate
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
@@ -10,25 +12,20 @@ int min = 100000;
 int i;
 float avg;
 
-void* avg_runner(int arr[])
+void* avg_calc(int arr[])
 {
-
 	int i;
-
 	for(i = 0; i < numCount; i++)
 	{ 
 		sum += arr[i];
 		avg = sum/numCount;
 	}
-
 	pthread_exit(0);
 }
 
-void* min_runner(int arr[])
+void* min_calc(int arr[])
 {
-
 	int i;
-
 	for(i = 0; i < numCount; i++)
 	{
 		if(i == 0)
@@ -38,18 +35,15 @@ void* min_runner(int arr[])
 		else if (min > arr[i])
 			min = arr[i];
 	}
-
 	pthread_exit(0);
 }
 
-void* max_runner(int arr[])
+void* max_calc(int arr[])
 {
 
 	int i;
-
 	for(i = 0; i < numCount; i++)
 	{
-
 		if(i ==0)
 		{
 			max = arr[i];
@@ -57,7 +51,6 @@ void* max_runner(int arr[])
 		else if(max < arr[i])
 			max = arr[i];
 	}
-
 	pthread_exit(0);
 }
 
@@ -70,19 +63,19 @@ int main(int argc, char **argv)
 	scanf("%d",&numCount);
 	int arr[numCount],i;  //array declared to hold numbers
 	printf("Enter the numbers\n");
-	 for(i=0;i<numCount;i++){ //reading array values in main itself
+	 for(i=0;i<numCount;i++){ 
 		      scanf("%d",&arr[i]);
 		       }
 
 	 pthread_attr_t attr;
-	 pthread_attr_init(&attr);//creating threads
+	 pthread_attr_init(&attr); //creating threads
 	 pthread_t thread1;
 	 pthread_t thread2;
 	 pthread_t thread3;
 
-	 pthread_create(&thread1, &attr, avg_runner, arr);  //threads callling
-	 pthread_create(&thread2, &attr, min_runner, arr);
-	 pthread_create(&thread3, &attr, max_runner, arr);
+	 pthread_create(&thread1, &attr, avg_calc, arr);  //threads calling
+	 pthread_create(&thread2, &attr, min_calc, arr);
+	 pthread_create(&thread3, &attr, max_calc, arr);
 
 	 pthread_join(thread1, NULL);
 	 pthread_join(thread2, NULL);
