@@ -20,7 +20,7 @@ the parent thread will output the values once the workers have exited.
 that determine other statistical values, such as median and standard
 deviation.)
 
-[Multithread.c](4.22/Multithread.c)
+[Multithread.c](https://github.com/ShettyAnush/CS252-OS-Assignment/blob/main/4.22/Multithread.c)
 
 ## Demonstration
 ![DEMO]()
