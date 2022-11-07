@@ -23,7 +23,7 @@ deviation.)
 [Multithread.c](https://github.com/ShettyAnush/CS252-OS-Assignment/blob/main/4.22/Multithread.c)
 
 ## Demonstration
-![DEMO]()
+![DEMO](https://github.com/ShettyAnush/CS252-OS-Assignment/blob/main/4.22/Display.png)
 
 The following thread fuctions and declarations were used:
 
