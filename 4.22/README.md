@@ -30,12 +30,12 @@ The following thread fuctions and declarations were used:
 
 1. ` pthread_t {thread name}`
 
-    - Used to declare a thread.
+    - Used to declare a thread
     - example : `pthread_t t1;`
     
 2. ` pthread_attr_t {thread attribute object name}`
 
-    - Used to declare a thread attribute object.
+    - Used to declare a thread attribute object
     - example : `pthread_attr_t attr;`
 
 3. `int pthread_create(pthread_t *thread, pthread_attr_t *attr, void *(*start_routine) (void *arg), void *arg);`
@@ -49,7 +49,7 @@ The following thread fuctions and declarations were used:
 
 4. ` void pthread_exit(void *status);`
 
-    - Used to terminate a thread.
+    - Used to terminate a thread
     - example : `pthread_exit(0);`
 
 5. `int pthread_join(pthread_t thread, void **status);`
