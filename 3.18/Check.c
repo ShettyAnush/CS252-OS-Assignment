@@ -4,9 +4,9 @@
 #include <string.h>
 
 int main () {
-        system("./Zombie &");
+        system("./Zombie &");  //Runs zombie program in background
         sleep(3);
-        system("ps -l");
+        system("ps -l");      //Displays process states
         sleep(7);
         printf("\n\nupdated list of processes with their states\n\n");
         system("ps -l");
