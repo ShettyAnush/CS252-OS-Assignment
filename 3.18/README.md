@@ -21,8 +21,8 @@ is 4884, you would enter<br>
 kill -9 4884
 
 ## Source Code
-[Zombie.c](https://github.com/ShettyAnush/CS252-OS-Assignment/blob/main/3.18/Zombie.c)
-To check if the program created a zombie process:
+[Zombie.c](https://github.com/ShettyAnush/CS252-OS-Assignment/blob/main/3.18/Zombie.c)<br>
+To check if the program created a zombie process:<br>
 [Check.c](https://github.com/ShettyAnush/CS252-OS-Assignment/blob/main/3.18/Check.c)
 
 ## Demonstration
