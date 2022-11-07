@@ -7,8 +7,8 @@ for a list of numbers. This program will be passed a series of numbers
 on the command line and will then create three separate worker threads.
 One thread will determine the average of the numbers, the second will
 determine the maximum value, and the third will determine the minimum
-value. For example, suppose your program is passed the integers
-90 81 78 95 79 72 85
+value. For example, suppose your program is passed the integers<br>
+90 81 78 95 79 72 85<br>
 The program will report<br>
 The average value is 82<br>
 The minimum value is 72<br>
