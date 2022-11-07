@@ -20,35 +20,33 @@ process using the kill command. For example, if the pid of the parent
 is 4884, you would enter<br>
 kill -9 4884
 
+## Source Code
 [Zombie.c](https://github.com/ShettyAnush/CS252-OS-Assignment/blob/main/3.18/Zombie.c)
+To check if the program created a zombie process:
+[Check.c](https://github.com/ShettyAnush/CS252-OS-Assignment/blob/main/3.18/Check.c)
 
 ## Demonstration
-![DEMO]()
+![DEMO](https://github.com/ShettyAnush/CS252-OS-Assignment/blob/main/3.18/Display.png)
 
-The following thread fuctions and declarations were used:
+The following process fuctions and declarations were used:
 
-1. ` pthread_t {thread name }`
+1. `fork()`
 
-    - Used to declare a thread.
-    - store the thread ID of the new thread.
-    - example : `pthread_t t1;`
+    - used to create processes
+    - returns process ID
+    - example : `pid = fork();`
 
-2. `int pthread_create(pthread_t *thread, pthread_attr_t *attr, void *(*start_routine) (void *arg), void *arg);`
+2. `getpid()`
 
-    - thread: location where the thread ID is stored
-    - attr: structure that specifies the attributes of the new thread.
-    - start_routine: routine where the thread begins.
-    - arg : arguments to pass to start_routine.
-    - example : `pthread_create(&t1,NULL,&avg,NULL);`
+    - returns process ID of the calling process
 
-3. ` void pthread_exit(void *status);`
+3. `sleep()`
 
-    - Used to terminate a thread.
-    - example : `pthread_exit(NULL);`
+    - Used to delay execution with time parameter
 
-4. `int pthread_join(pthread_t thread, void **status);`
+4. `exit()`
 
-    - Used to wait for the termination of a thread
-    - example : `pthread_join(t1,NULL);`
+    - Used to terminate the process immediately
 
-
+5. `system()`
+    - used to create a child process that executes the shell command
